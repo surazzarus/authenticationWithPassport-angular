@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>PassportJS with Angular Routes</title>
+    <base href="/">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="js/app.js"></script>
+    <!-- angular controllers -->
+    <script src="js/controllers/login.js"></script>
+    <script src="js/controllers/register.js"></script>
+    <script src="js/controllers/profile.js"></script>
+</head>
+<body ng-app="passport">
+    <div  class="container">
+        <nav ng-controller="navCtrl">
+            <a href="/home">Home</a> |
+
+            <span ng-show="!currentUser"> <!-- show this if user has not logged in -->
+                <a href="/register">Register</a> |
+                <a href="/login">Log in</a>
+            </span>
+
+            <span ng-show="currentUser"> <!-- show this if user has logged in -->
+                <a href="/profile">Profile</a> |
+                <a href="/logout" ng-click="logout()">Log out</a>
+            </span>
+        </nav>
+
+        <!-- {{ currentUser }} -->
+
+        <div ng-view>
+            <h1>PassportJs Authentication</h1>
+        </div>
+    </div>
+</body>
+</html>

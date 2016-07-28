@@ -1,0 +1,23 @@
+{
+  "name": "passport_ngRoutes",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Suraj Shrestha <suraz.zarus@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.7",
+    "angular-route": "^1.5.7",
+    "font-awesome": "^4.6.3"
+  }
+}
